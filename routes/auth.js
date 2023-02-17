@@ -8,7 +8,7 @@ const authController = require('../controllers/authController');
 router.post('/', authController.handleLogin);
 
 
-const LOGIN_URL = '/auth';
+const LOGIN_URL = '../routes/auth';
 
 const Login = () => {
     const {setAuth} = useContext(AuthContext);
@@ -62,7 +62,7 @@ const Login = () => {
         {sucess ? (
             <section>
                 <h1>Success!</h1>
-                <p>You are now logged in.</p>
+                <p>LoggedIn</p>
                 <br />
                 <p>
                     <a href="/reservation">Reservation</a>
