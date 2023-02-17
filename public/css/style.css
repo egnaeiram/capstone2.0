@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@500&display=swap");
+
+body {
+  font-family: "Saira", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* mordern slim scrollbar with red thumb */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666ad6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fbedfffd;
+}
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* @keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+} */
+
+.ticker-wrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-left: 100%;
+  height: 1rem;
+  background: #c8bcde81;
+  white-space: nowrap;
+  /* padding-left: 100%; */
+  /* box-sizing: content-box; */
+}
+
+.ticker-wrap .ticker {
+  height: 1rem;
+  line-height: 1rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  display: flex;
+
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  -webkit-animation-duration: 30s;
+}
+
+.ticker-wrap .ticker__item {
+  display: inline-block;
+  height: 100%;
+  font-size: 0.7rem;
+  font-weight: 600;
+  /* padding-bottom: 1rem; */
+  /* vertical-align: middle; */
+  /* line-height: 1em; */
+  /* color: #ddcbcbab; */
+  display: inline-block;
+  padding: 0 2rem;
+  /* font-size: 2rem; */
+  color: rgba(0, 0, 0, 0.2);
+  font-family: "Lexend Exa", sans-serif;
+}
+/* repeat sliding text, soon as last text shows(slides in from the right) */
+
+/* .ticker__item:nth-child(2) {
+  animation-delay: 25s;
+} */
+
+.title {
+  color: rgb(0, 0, 0);
+  margin-bottom: 50px;
+  padding: 0px;
+  text-align: center;
+  font-size: 70px;
+  line-height: 0px;
+  border-style: hidden;
+  outline: none;
+}
+
+.title h1 {
+  font-size: 85px;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  text-align: center;
+  /* font-weight: bold; */
+}
+
+.design {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 49px;
+  width: 100%;
+  background-color: cornflowerblue;
+  background-image: url(/capstone/YCIT099-Capstone/Capstone/images/citybike.png);
+}
+
+.motto {
+  color: #000000;
+  /* margin-bottom: 20px; */
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.motto h2 {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  /* margin: 31px; */
+  margin-bottom: 10px;
+  color: rgb(99, 96, 96);
+}
+
+/* .material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  position: absolute;
+  top: 30px;
+  justify-content: center;
+  align-items: center;
+  left: 40px;
+  margin: 0px;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  color: rgb(76, 3, 144) !important;
+} */
+
+/* menu aka navbar */
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 12rem;
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  /* background-color: rgb(202, 160, 160); */
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 12rem;
+  position: fixed;
+  top: 30px;
+  right: 35px;
+}
+
+.profile-icon {
+  position: absolute;
+  left: 9rem;
+  top: -5px;
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-icon svg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+}
+.menu-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.profile-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-content .menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.menu-content a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #314c4c;
+  max-width: 100%;
+  height: 100%;
+}
+
+.profile-content a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #314c4c;
+  max-width: 100%;
+  height: 100%;
+}
+
+.profile-content {
+  margin-top: 2rem;
+}
+
+.menu-icon-bar1,
+.menu-icon-bar2,
+.menu-icon-bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #314c4c;
+  margin: 6px 0;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.menu-icon {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu .change .menu-icon-bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu .change .menu-icon-bar2 {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu .change .menu-icon-bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.homeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.homeButtons .reservation,
+.homeButtons .viewmap {
+  width: 140px;
+  text-align: center;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #314c4c;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <favicon href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ryde</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <div class="ticker__item">
+          Rides available in: Downtown Montreal • Point-st Charles • NDG • Montreal-Nord • Côte-des-Neiges • Rosemont • LaSalle • Westmount • Verdun • Ville-Marie • Plateau-Mont-Royal • Outremont • Ahuntsic-Cartierville • Hochelaga-Maisonneuve • Villeray-Saint-Michel • Saint-Henri • Saint-Laurent • Saint-Michel • Anjou • Mercier-Hochelaga-Maisonneuve • Lachine
+        </div>
+        <div class="ticker__item">| Current Weather: (❄️) -3°C • Snowy</div>
+        </div>   
+      </div>
+      <div class="header">
+        <div class="title">
+          <h1>R Y D E</h1>
+        </div>
+        <div class="design"></div>
+        <div class="motto">
+          <h2>Now, Let's take you on an Adventure.</h2>
+        </div>
+      </div>
+
+      <div class="homeButtons">
+        <a href="reservation.html" class="reservation">Reserve a ryde</a>
+        <a href="viewmap.html" class="viewmap">View Map</a>
+      </div>
+
+      <div class="menu">
+        <div class="menu-icon">
+          <div class="menu-icon-bar1"></div>
+          <div class="menu-icon-bar2"></div>
+          <div class="menu-icon-bar3"></div>
+        </div>
+        <nav class="menu-content" style="display: none">
+          <ul>
+            <li>
+              <a href="main.html">Home </a>
+            </li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="profile">
+        <div class="profile-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height=48" width="48">
+            <path
+              d="M11.1 35.25q3.15-2.2 6.25-3.375Q20.45 30.7 24 30.7q3.55 0 6.675 1.175t6.275 3.375q2.2-2.7 3.125-5.45Q41 27.05 41 24q0-7.25-4.875-12.125T24 7q-7.25 0-12.125 4.875T7 24q0 3.05.95 5.8t3.15 5.45ZM24 25.5q-2.9 0-4.875-1.975T17.15 18.65q0-2.9 1.975-4.875T24 11.8q2.9 0 4.875 1.975t1.975 4.875q0 2.9-1.975 4.875T24 25.5ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.775t4.3-6.35q2.725-2.725 6.375-4.3Q19.9 4 24 4q4.15 0 7.775 1.575t6.35 4.3q2.725 2.725 4.3 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.3 6.375-2.725 2.725-6.35 4.3Q28.15 44 24 44Zm0-3q2.75 0 5.375-.8t5.175-2.8q-2.55-1.8-5.2-2.75-2.65-.95-5.35-.95-2.7 0-5.35.95-2.65.95-5.2 2.75 2.55 2 5.175 2.8Q21.25 41 24 41Zm0-18.5q1.7 0 2.775-1.075t1.075-2.775q0-1.7-1.075-2.775T24 14.8q-1.7 0-2.775 1.075T20.15 18.65q0 1.7 1.075 2.775T24 22.5Zm0-3.85Zm0 18.7Z"
+            />
+          </svg>
+        </div>
+        <nav class="profile-content" style="display: none">
+          <ul>
+            <li><a href="account.html">My Account</a></li>
+            <li><a href="access.html">Accessibility</a></li>
+            <li><a href="payment.html">Payment Methods</a></li>
+            <li><a href="history.html">Ryde History</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="damages.html">Report Loss/Damage</a></li>
+            <li><a href="lang.html">Français (FR)</a></li>
+            <li><a href="referral.html">Referrals</a></li>
+            <li><a href="login.html">Log Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--Menu-->
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const menuContent = document.querySelector(".menu-content");
+
+      menuIcon.addEventListener("click", function () {
+        menuIcon.classList.toggle("change");
+        menuContent.style.display =
+          menuContent.style.display === "none" ? "block" : "none";
+      });
+
+
+      const profileIcon = document.querySelector(".profile-icon");
+      const profileContent = document.querySelector(".profile-content");
+
+      profileIcon.addEventListener("click", function () {
+        profileIcon.classList.toggle("change");
+        profileContent.style.display =
+          profileContent.style.display === "none" ? "flex" : "none";
+      });
+
+    </script>
+  </body>
+</html>
