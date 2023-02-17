@@ -79,7 +79,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <> 
       {success ? (
         <section>
           <h1>Success!</h1>
