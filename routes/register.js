@@ -68,7 +68,7 @@ const Register = () => {
         if (!err.response) {
             setErrMsg('Network error.');
         } else if (err.response?.status === 409) {
-            setErrMsg('Username already exists. Enter a new one.');
+            setErrMsg('Username already exists. Please, enter a new one.');
         } else {
             setErrMsg('Registration Failed. Please try again.')
         }
@@ -115,7 +115,7 @@ const Register = () => {
         <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
         <FontAwesomeIcon icon={faInfoCircle} />
         4 to 24 characters, must start with a letter.<br />
-        May contain letters, numbers, hyphens, and underscores.
+        Should contain at least one of: numbers, hyphens or/and underscores.
         </p>
 
         <label htmlFor="password">
@@ -177,7 +177,7 @@ const Register = () => {
         <p>
             Already Registered?<br />
             <span className="line">
-                <a href="/login">Login</a>
+                <a href="/auth">Login</a>
             </span>
         </p>
     </section>
